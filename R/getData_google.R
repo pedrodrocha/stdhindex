@@ -9,7 +9,7 @@
 getData_google <- function(nome){
 
   if(nome %in% profile_data$docente == FALSE){
-    rlang::abort(message = "Scholar not found. Please check  'profile_data' for available names.",
+    rlang::abort(message = "Scholar not  found. Please check  'profile_data' for available names.",
                  class = "Name not found")
   }
 
