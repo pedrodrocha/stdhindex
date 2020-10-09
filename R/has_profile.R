@@ -6,12 +6,12 @@
 #' @export
 #'
 #' @importFrom magrittr %>%
-has_profile <- function(nome){
+has_profile <- function(Nome){
 
   profile_data %>%
-    dplyr::filter(docente %in% nome) -> para_teste
+    dplyr::filter(docente %in% Nome) -> para_teste
 
-  if(is.na(para_teste$link)){
+  if(is.na(para_teste$link[1])){
     return(FALSE)
   } else {
 
