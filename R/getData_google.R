@@ -14,7 +14,7 @@ getData_google <- function(nome){
   teste <- has_profile(nome = nome)
 
   if (teste == FALSE){
-    rlang::warn(message = paste(nome, " Does not has a profile at Google Scholar"))
+    rlang::warn(message = paste(nome, " Doesn't have a profile at Google Scholar"))
 
     dat_retorno <- tibble::tibble(
       docente = nome,
