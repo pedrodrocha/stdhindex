@@ -8,8 +8,11 @@
 #'
 getData_google <- function(nome){
 
-  profile_data %>%
-    dplyr::filter(docente %in% nome) -> perfis_selecionados
+  if(nome %in% profile_data$docente == FALSE){
+    rlang::abort(message = "Scholar not found. Please check  'profile_data' for available names.",
+                 class = "Name not found")
+  }
+
 
   teste <- has_profile(nome = nome)
 
@@ -29,6 +32,9 @@ getData_google <- function(nome){
     rlang::inform(glue::glue("Iniciando coleta do perfil de {nome}"))
   }
 
+
+  profile_data %>%
+    dplyr::filter(docente %in% nome) -> perfis_selecionados
 
   xml2::read_html(perfis_selecionados$link) %>%
     rvest::html_nodes("table") %>%
