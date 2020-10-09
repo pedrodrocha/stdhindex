@@ -1,3 +1,11 @@
+#' Title
+#'
+#' @param nome
+#'
+#' @return
+#' @export
+#'
+#' @importFrom magrittr %>%
 has_profile <- function(nome){
 
   profile_data %>%

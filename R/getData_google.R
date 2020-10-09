@@ -1,3 +1,11 @@
+#' Title
+#'
+#' @param nome
+#'
+#' @return
+#' @export
+#' @importFrom magrittr %>%
+#'
 getData_google <- function(nome){
 
   profile_data %>%
@@ -6,7 +14,7 @@ getData_google <- function(nome){
   teste <- has_profile(nome = nome)
 
   if (teste == FALSE){
-    rlang::warn(message = paste(nome, "não possui  perfil no Google Scholar"))
+    rlang::warn(message = paste(nome, "Do not has a profile at Google Scholar"))
 
     dat_retorno <- tibble::tibble(
       docente = nome,
