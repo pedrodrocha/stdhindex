@@ -43,11 +43,15 @@ getData_google <- function(Nome, Ano){
       .[[1]] -> dat
 
 
+    todos <- dat$Todos
+    h5 <- dat$`Desde 2015`
+
+
     dat_retorno <- tibble::tibble(
       docente = Nome,
       tipo = c("citacoes","h-index","i10-index"),
-      total = dat$All,
-      ultimos_5_anos = dat$`Since 2015`)
+      total = todos,
+      ultimos_5_anos = h5)
 
     rlang::inform(message = glue::glue("Coleta do perfil de {Nome} finalizada"))
 
