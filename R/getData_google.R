@@ -43,8 +43,8 @@ getData_google <- function(Nome, Ano){
       .[[1]] -> dat
 
 
-    todos <- dat$Todos
-    h5 <- dat$`Desde 2015`
+    todos <- dat$All
+    h5 <- dat$`Since 2015`
 
 
     dat_retorno <- tibble::tibble(
