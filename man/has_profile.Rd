@@ -4,7 +4,7 @@
 \alias{has_profile}
 \title{Title}
 \usage{
-has_profile(nome)
+has_profile(Nome)
 }
 \arguments{
 \item{nome}{}

@@ -4,10 +4,10 @@
 \alias{getData_google}
 \title{Title}
 \usage{
-getData_google(nome)
+getData_google(Nome, Ano)
 }
 \arguments{
-\item{nome}{}
+\item{ano}{}
 }
 \value{
 
